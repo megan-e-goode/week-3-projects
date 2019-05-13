@@ -1,13 +1,19 @@
 require 'game'
 
 describe Dice do
-  it '.roll the dice' do
-    dice = Dice.new
-    expect(dice).to respond_to(:roll)
+  before(:each) do
+    @dice = Dice.new
   end
 
-  it '.roll returns random number between 1 and 6' do
-    dice = Dice.new
-    expect(dice.roll).to be_between(1, 6).inclusive
+  it '.roll the dice' do
+    expect(@dice).to respond_to(:roll)
+  end
+
+  it '.roll returns a number between 1 and 6' do
+    expect(@dice.roll).to be_between(1, 6).inclusive
+  end
+
+  it '.roll returns a random number between 1 and 6' do
+
   end
 end
