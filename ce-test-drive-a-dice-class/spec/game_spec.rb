@@ -10,7 +10,9 @@ describe Dice do
   end
 
   it '.roll returns a number between 1 and 6' do
-    expect(@dice.roll).to be_between(1, 6).inclusive
+    @dice.roll.each do |num|
+      expect(num).to be_between(1, 6).inclusive
+    end
   end
 
 # Not sure with this one
