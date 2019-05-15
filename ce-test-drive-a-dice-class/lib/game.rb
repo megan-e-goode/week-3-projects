@@ -1,9 +1,13 @@
 class Dice
   def roll(num_of_dice)
-    total = []
+    points = []
     num_of_dice.times do
-      total.push(1 + rand(6))
+      points.push(1 + rand(6))
     end
-    total
+    points
+  end
+
+  def score(points)
+    points.sum
   end
 end
