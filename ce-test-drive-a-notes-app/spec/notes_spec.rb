@@ -15,4 +15,10 @@ describe Note do
     expect(note).to respond_to(:add)
   end
 
+  it '.add takes params title and body' do
+    title = "Title"
+    body = "Body"
+    expect(note.add(title, body)).to eq(nil)
+  end
+
 end

@@ -5,7 +5,7 @@ class Note
     @notes_list = []
   end
 
-  def add
+  def add(title, body)
 
   end
 end
