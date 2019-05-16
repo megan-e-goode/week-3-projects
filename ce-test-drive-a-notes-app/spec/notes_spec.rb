@@ -11,10 +11,6 @@ describe Note do
     expect(note.notes_list).to eql([])
   end
 
-  it 'Note responds to .add' do
-    expect(note).to respond_to(:add)
-  end
-
   it '.add title and body to notes_list' do
     #Arrange
     title = "Title"
