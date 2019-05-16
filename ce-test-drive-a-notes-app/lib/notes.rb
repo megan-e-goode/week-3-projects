@@ -10,6 +10,10 @@ class Note
   end
 
   def show_titles
-    @notes_list.each { |hash| puts hash[:title] } 
+    @notes_list.each { |hash| puts hash[:title] }
+  end
+
+  def show_list
+    # @notes_list.each { |hash| puts "#{hash[:title]}: #{hash[:body]}" }
   end
 end

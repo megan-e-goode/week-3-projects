@@ -34,4 +34,8 @@ describe Note do
     expect(note.show_titles).to eql(note.notes_list)
   end
 
+  it 'Note responds to .show_list' do
+    expect(note).to respond_to(:show_list)
+  end
+
 end
