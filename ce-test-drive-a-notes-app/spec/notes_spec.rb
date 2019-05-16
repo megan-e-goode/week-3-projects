@@ -21,10 +21,6 @@ describe Note do
     expect(note.notes_list).to include({ title: "Title", body: "Body" })
   end
 
-  it 'Note responds to .show_titles' do
-    expect(note).to respond_to(:show_titles)
-  end
-
   it '.show_titles returns a list of titles ONLY' do
     note.notes_list.push(
       { title: "A", body: "B" },
@@ -34,8 +30,13 @@ describe Note do
     expect(note.show_titles).to eql(note.notes_list)
   end
 
-  it 'Note responds to .show_list' do
-    expect(note).to respond_to(:show_list)
+  it '.show_list returns the list' do
+    note.notes_list.push(
+      { title: "A", body: "B" },
+      { title: "C", body: "D" },
+      { title: "E", body: "F" }
+    )
+    expect(note.show_list).to eq(note.notes_list)
   end
 
 end

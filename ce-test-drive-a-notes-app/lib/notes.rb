@@ -14,6 +14,6 @@ class Note
   end
 
   def show_list
-    # @notes_list.each { |hash| puts "#{hash[:title]}: #{hash[:body]}" }
+    @notes_list.each { |hash| puts "#{hash[:title]}: #{hash[:body]}" }
   end
 end
