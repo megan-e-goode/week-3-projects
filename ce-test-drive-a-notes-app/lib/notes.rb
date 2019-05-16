@@ -8,4 +8,8 @@ class Note
   def add(title, body)
     @notes_list.push({ title: title, body: body })
   end
+
+  def show_titles
+
+  end
 end

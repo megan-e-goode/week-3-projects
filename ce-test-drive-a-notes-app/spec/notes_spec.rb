@@ -21,4 +21,8 @@ describe Note do
     expect(note.notes_list).to include({ title: "Title", body: "Body" })
   end
 
+  it 'Note responds to .show_titles' do
+    expect(note).to respond_to(:show_titles)
+  end
+
 end
