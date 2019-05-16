@@ -15,10 +15,14 @@ describe Note do
     expect(note).to respond_to(:add)
   end
 
-  it '.add takes params title and body' do
+  it '.add title and body to notes_list' do
+    #Arrange
     title = "Title"
     body = "Body"
-    expect(note.add(title, body)).to eq(nil)
+    # Act
+    note.add(title, body)
+    # Assert
+    expect(note.notes_list).to include({ title: "Title", body: "Body" })
   end
 
 end

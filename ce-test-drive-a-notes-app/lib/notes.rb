@@ -6,6 +6,6 @@ class Note
   end
 
   def add(title, body)
-
+    @notes_list.push({ title: title, body: body })
   end
 end
