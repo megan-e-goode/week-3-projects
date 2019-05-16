@@ -10,6 +10,6 @@ class Note
   end
 
   def show_titles
-
+    @notes_list.each { |hash| puts hash[:title] } 
   end
 end

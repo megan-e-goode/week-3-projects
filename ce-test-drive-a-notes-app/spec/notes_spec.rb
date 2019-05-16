@@ -25,4 +25,13 @@ describe Note do
     expect(note).to respond_to(:show_titles)
   end
 
+  it '.show_titles returns a list of titles ONLY' do
+    note.notes_list.push(
+      { title: "A", body: "B" },
+      { title: "C", body: "D" },
+      { title: "E", body: "F" }
+    )
+    expect(note.show_titles).to eql(note.notes_list)
+  end
+
 end
