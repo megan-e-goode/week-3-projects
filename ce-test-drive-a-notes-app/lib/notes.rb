@@ -4,4 +4,8 @@ class Note
   def initialize
     @notes_list = []
   end
+
+  def add
+
+  end
 end

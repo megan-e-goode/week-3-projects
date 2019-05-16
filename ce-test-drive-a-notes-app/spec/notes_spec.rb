@@ -11,4 +11,8 @@ describe Note do
     expect(note.notes_list).to eql([])
   end
 
+  it 'Note responds to .add' do
+    expect(note).to respond_to(:add)
+  end
+
 end
