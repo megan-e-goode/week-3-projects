@@ -13,7 +13,9 @@ class Note
     @notes_list.each { |hash| puts hash[:title] }
   end
 
-  def show_list
-    @notes_list.each { |hash| puts "#{hash[:title]}: #{hash[:body]}" }
+  def show_list(title)
+    note = @notes_list.select { |note| note[:title] == title}
+    puts "#{note[0][:title]}: #{note[0][:body]}"
+    note[0]
   end
 end

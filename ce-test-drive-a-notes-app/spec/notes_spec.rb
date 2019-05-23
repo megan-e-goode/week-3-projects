@@ -30,13 +30,12 @@ describe Note do
     expect(note.show_titles).to eql(note.notes_list)
   end
 
-  it '.show_list returns the list' do
+  it 'shows the title and body of a selected note' do
     note.notes_list.push(
       { title: "A", body: "B" },
       { title: "C", body: "D" },
       { title: "E", body: "F" }
     )
-    expect(note.show_list).to eq(note.notes_list)
+    expect(note.show_list("A")).to eq({ title: "A", body: "B" })
   end
-
 end
